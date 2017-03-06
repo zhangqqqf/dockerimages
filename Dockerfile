@@ -1,6 +1,6 @@
 FROM centos:7
 
-MAINTAINER nimmis <kjell.havneskold@gmail.com>
+MAINTAINER hearglobal <zhangxin@hearglobal.com>
 
 RUN yum update -y && \
 yum install -y wget && \
