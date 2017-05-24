@@ -12,13 +12,7 @@ rm -f jdk-8u121-linux-x64.rpm && \
 yum clean all
 
 # 安装
-RUN yum install -y chrony
-# 启用
-RUN systemctl start chronyd
-# 设置亚洲时区
-RUN timedatectl set-timezone Asia/Shanghai
-# 启用NTP同步
-RUN timedatectl set-ntp yes
+RUN ln -sf /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
 
 # Set environment variables.
 ENV HOME /root
