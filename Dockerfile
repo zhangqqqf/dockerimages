@@ -12,7 +12,7 @@ rm -f jdk-8u121-linux-x64.rpm && \
 yum clean all
 
 # 安装
-RUN yum install chrony
+RUN yum install -y chrony
 # 启用
 RUN systemctl start chronyd
 # 设置亚洲时区
