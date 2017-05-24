@@ -11,6 +11,8 @@ yum localinstall -y jdk-8u121-linux-x64.rpm && \
 rm -f jdk-8u121-linux-x64.rpm && \
 yum clean all
 
+RUN cp -f /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
+
 # Set environment variables.
 ENV HOME /root
 
